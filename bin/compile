@@ -134,6 +134,7 @@ EOF
 chmod +x $BUILD_DIR/.profile.d/gen-pgbouncer-conf.sh
 
 echo "-----> Generating the startup script"
+mkdir -p $BUILD_DIR/bin
 cat >>$BUILD_DIR/bin/pgbouncer-stunnel.sh <<EOF
 #!/usr/bin/env bash
 export OLD_DATABASE_URL=\$DATABASE_URL
